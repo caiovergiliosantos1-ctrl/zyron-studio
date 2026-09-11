@@ -95,9 +95,9 @@ export async function submitTestimonial(input: {
 export async function submitContactRequest(input: {
   name: string;
   email: string;
-  phone?: string;
-  project_type?: string;
-  budget?: string;
+  phone?: string | undefined;
+  project_type?: string | undefined;
+  budget?: string | undefined;
   message: string;
 }) {
   const { error } = await supabase.from("contact_requests").insert(input);
