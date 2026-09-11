@@ -81,9 +81,9 @@ export function Contact() {
                   mutation.mutate({
                     name: form.name.trim(),
                     email: form.email.trim(),
-                    phone: form.phone.trim() || undefined,
-                    project_type: form.project_type || undefined,
-                    budget: form.budget || undefined,
+                    phone: form.phone.trim() || null,
+                    project_type: form.project_type || null,
+                    budget: form.budget || null,
                     message: form.message.trim(),
                   });
                 }}
